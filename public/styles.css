@@ -1,0 +1,248 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6f8;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f5f6f8;
+    box-shadow: none;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.toggle-switch input:checked + .switch {
+    background-color: #2196F3;
+}
+
+.toggle-switch input:checked + .switch:before {
+    transform: translateX(26px);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.center-content img {
+    width: 150px;
+    height: 150px;
+}
+
+.first-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.robot-icon {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+#sessionToggleButton{
+    background-color: #007bff;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sessionToggleButton i {
+    color: white;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.loading-spinner div {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    animation: loading-spinner 1.2s linear infinite;
+}
+
+.loading-spinner div:nth-child(1) {
+    animation-delay: 0s;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(2) {
+    animation-delay: -0.1s;
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(3) {
+    animation-delay: -0.2s;
+    top: 50%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(4) {
+    animation-delay: -0.3s;
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(5) {
+    animation-delay: -0.4s;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(6) {
+    animation-delay: -0.5s;
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(7) {
+    animation-delay: -0.6s;
+    top: 50%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner div:nth-child(8) {
+    animation-delay: -0.7s;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes loading-spinner {
+    0%, 20%, 80%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+#sessionToggleButton.active-session {
+    background-color: #dc3545;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .logo img {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .transcript-content {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border: 1px solid #444;
+}
