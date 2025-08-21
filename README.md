@@ -397,20 +397,6 @@ Based on testing with the free Gemini API tier:
 - **Audio Quality**: 16kHz, clear transmission
 - **Connection Stability**: 99%+ uptime with stable internet
 
-## 🎥 Demo & Examples
-
-### Video Demo
-A comprehensive demo video is available showing:
-- Natural conversation flow
-- Real-time interruption handling
-- Multi-language support
-- Performance metrics
-
-**Video Link**: [Google Drive Demo](https://drive.google.com/your-demo-link)
-
-### Live Demo
-Try the live version: [Your deployed URL]
-
 ## 🤝 Contributing
 
 We welcome contributions! Please follow these steps:
